@@ -10,25 +10,21 @@ Welcome to the repository containing various C projects developed by Shaul Rosen
 
    - **Description:** Implementation and utilization of fundamental data structures in C.
    - **Key Concepts:** Arrays, Linked Lists, Stacks, Queues, Trees.
-   - **Code Location:** [Data_Structures_Project](link/to/data_structures_project)
 
 2. **System Programming Challenges**
 
    - **Description:** A set of challenges focusing on system-level programming in C.
    - **Key Concepts:** File I/O, Process Management, Memory Allocation.
-   - **Code Location:** [System_Programming_Challenges](link/to/system_programming_challenges)
 
 3. **C Basics Showcase**
 
    - **Description:** A collection of projects emphasizing essential C programming concepts.
    - **Key Concepts:** Variables, Control Structures, Functions.
-   - **Code Location:** [C_Basics_Showcase](link/to/c_basics_showcase)
 
 4. **Scheduler Project**
 
    - **Description:** A comprehensive scheduler project showcasing practical C application development.
    - **Key Concepts:** Time Management, Task Scheduling.
-   - **Code Location:** [Scheduler_Project](link/to/scheduler_project)
 
 ## Getting Started
 
@@ -42,10 +38,6 @@ Each project has its own directory with a README file providing specific instruc
 ## Contributing
 
 Feel free to contribute to any of the projects by opening issues, submitting feature requests, or creating pull requests. Your input is highly appreciated!
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](link/to/license) file for details.
 
 ## Acknowledgments
 
