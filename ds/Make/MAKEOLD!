@@ -1,0 +1,43 @@
+DS=p_queue
+DS2=dlist
+DS3=sorted_list
+
+CC=gcc
+CPPFLAGS= -ansi -pedantic-errors -Wall -Wextra
+
+ifeq '$(findstring release, $(MAKECMDGOALS))' 'release'
+$(eval CPPFLAGS += -DNDEBUG -o3)
+else
+$(eval CPPFLAGS += -g)
+endif
+
+$(DS).out: $(DS2).o $(DS3).o $(DS).o $(DS)_test.o  
+	$(CC) $(CPPFLAGS) $^ -o $@
+	
+$(DS2).o: ./src/$(DS2).c
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I./include
+	
+$(DS3).o: ./src/$(DS3).c
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I./include
+	
+$(DS).o: ./src/$(DS).c
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I./include
+
+$(DS)_test.o: ./test/$(DS)_test.c
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I./include
+
+.PHONY: debug
+debug: $(word 1,$(DS).out)
+
+.PHONY: release
+release: $(word 1,$(DS).out)
+
+.PHONY: vlg
+vlg: 
+	valgrind --leak-check=yes --track-origins=yes ./$(DS).out
+	
+.PHONY: clean
+clean: 
+	-rm -f *.out
+	-rm -f *.o
+
